@@ -2,27 +2,6 @@ const fs = require("fs");
 const http = require("http");
 const path = require("path");
 const url = require("url");
-// const textIn = fs.readFileSync("starter/txt/input.txt", "utf-8");
-// console.log(textIn);
-
-// const textout = `This is what we know about the avacados:  ${textIn}.\n Created on ${Date.now()}`;
-// fs.writeFileSync("starter/txt/output.txt", textout);
-// console.log("file Written!");
-
-//Non-blocking Asynchronous way
-
-// fs.readFile("starter/txt/start.txt", "utf-8", (err, data) => {
-//   console.log(data);
-//   fs.readFile(`starter/txt/${data}.txt`, "utf-8", (err, data1) => {
-//     console.log(data1);
-//     fs.readFile("starter/txt/append.txt", "utf-8", (err, data2) => {
-//       console.log(data2);
-//       fs.writeFile("starter/txt/final.txt", `${data1}\n${data2}`, (err) => {
-//         console.log("check final.txt file");
-//       });
-//     });
-//   });
-// });
 
 const replaceTemplate = function (temp, product) {
   let output = temp.replace(/{%PRODUCTNAME%}/g, product.productName);
